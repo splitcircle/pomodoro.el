@@ -212,10 +212,7 @@ Formatted with `format-seconds'."
   (interactive)
   (play-pomodoro-sound pomodoro-work-start-sound))
 
-(defun pomodoro-add-to-mode-line ()
-  (setq-default mode-line-format
-                (cons '(pomodoro-mode-line-string pomodoro-mode-line-string)
-                      mode-line-format)))
+(add-to-list 'global-mode-string 'pomodoro-mode-line-string)
 
 (provide 'pomodoro)
 ;;; pomodoro.el ends here
